@@ -52,6 +52,7 @@
             &:before {
                 font-size: 18px;
                 margin-right: 8px;
+                color: $IncreaseWhite;
             }
         }
     }
@@ -76,6 +77,12 @@
         background-color: transparent;
         border-color: transparent;
         
+        &.iconized {
+            span:before {
+                color: $Sky;
+            }
+        }
+        
         &:hover {
             background-color: rgba(24,32,38,.07);
             box-shadow: none;
@@ -83,7 +90,14 @@
         
         &:active {
             color: $Sky-bold;
+            
+            &.iconized {
+                span:before {
+                    color: $Sky-bold;;
+                }
+            }
         }
+        
     }
     
     &.borde {
