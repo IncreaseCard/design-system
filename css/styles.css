@@ -297,7 +297,8 @@ h3 {
       margin-top: -1px; }
       .button.iconized span:before {
         font-size: 18px;
-        margin-right: 8px; }
+        margin-right: 8px;
+        color: #FFFFFF; }
   .button.alert {
     color: #FFFFFF;
     background-color: #E71321;
@@ -311,11 +312,15 @@ h3 {
     color: #0F6BFF;
     background-color: transparent;
     border-color: transparent; }
+    .button.transparent.iconized span:before {
+      color: #0F6BFF; }
     .button.transparent:hover {
       background-color: rgba(24, 32, 38, 0.07);
       box-shadow: none; }
     .button.transparent:active {
       color: #07357F; }
+      .button.transparent:active.iconized span:before {
+        color: #07357F; }
   .button.borde {
     color: #0F6BFF;
     background-color: transparent;
