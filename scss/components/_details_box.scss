@@ -1,0 +1,30 @@
+/****************************************************************/
+/****************************************************************/
+/* Details box */
+/****************************************************************/
+/****************************************************************/
+
+
+.details_box {
+//    width: 60%;
+    border: 4px solid $IncreaseBlack;
+    box-sizing: border-box;
+    border-radius: 9px;
+    padding: 20px;
+    
+    .row {
+        margin: 10px 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* space-between;*/
+        
+        label {
+            width: 35%;
+        }
+    }
+    
+    .external_link {
+        font-weight: 600;
+    }
+}

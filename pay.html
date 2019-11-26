@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />    
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+	<title>Pay | Increase Design System</title>
+</head>
+
+<body>
+
+	<header>
+        <div class="row heading">
+            <img src="images/logos/Main%20Icon%20Color.svg"/>
+            <div class="title">
+                <h2>Increase Design System</h2>
+                <h3>Maquetado</h3>
+            </div>            
+        </div>
+        <nav class="row">
+            <ul>
+                <li><a href="/index.html">Librería</a></li>
+                <li><a href="/pay.html" class="active">Pay</a></li>
+                <li><a href="/card.html">Card</a></li>
+            </ul>
+        </nav>
+	</header>
+    
+    <div class="container">
+            
+        <div class="row">
+            <div class="col-3">
+                <div class="list-group" id="list-tab" role="tablist">
+                    
+                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#detailsBox" role="tab">Caja Detalles</a>
+                    
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#invoice" role="tab">Órden de pago</a>
+                    
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#payment_attempts" role="tab">Intento de pago en tabla</a>
+                    
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#modal_reintentar_pago" role="tab">Modal Reintentar pago</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="detailsBox" role="tabpanel">
+                        <iframe class="component_container" src="components/details_box.html"></iframe>
+                    </div>
+
+                    <div class="tab-pane fade" id="invoice" role="tabpanel">
+                        <iframe class="component_container" src="components/invoice.html"></iframe>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="payment_attempts" role="tabpanel">
+                        <iframe class="component_container" src="components/payment_attempts.html"></iframe>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="modal_reintentar_pago" role="tabpanel">
+                        <iframe class="component_container" src="components/modal_reintentar_pago.html"></iframe>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+	<footer>
+<!--		<p>Copyright 2009 Juan</p>-->
+	</footer>
+
+</body>
+
+</html>
