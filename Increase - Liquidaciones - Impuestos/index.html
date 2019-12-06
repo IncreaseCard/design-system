@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+	<title>Liquidaciones - Impuestos</title>
+</head>
+<body>
+	<!-- START HEADER -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light main">
+			<div class="nav-item dropdown">
+				
+				<a class="nav-link dropdown-toggle font-weight-bold card-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img src="assets/logo.svg">
+					Card
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Something else here</a>
+				</div>
+			</div>
+			
+			<ul class="nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link bell-icon" href="#"><img src="assets/bell.svg"></a>
+					<div class="verticalSeparator"></div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle font-weight-bold text-uppercase" href="#" id="navbarDropdown-right" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Arg
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#" tabindex="-1" aria-disabled="true"> <img src="assets/ic_person.svg"> Mi Cuenta</a>
+				</li>
+			</ul>
+
+		</nav>
+		<!-- START SUBMENU -->
+<!-- 		<nav >
+			<ul class="nav bg-dark justify-content-center submenu">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Calendario</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link active" href="#">Liquidaciones</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Lote/Operaciones</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contracargos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="#">Promociones</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="#">Reportes</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="#">Ajustes</a>
+				</li>
+			</ul>
+		</nav> -->
+
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="submenu">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav justify-content-center">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Calendario</a>
+					</li>
+					<li class="nav-item toggle-hidden">
+						<a class="nav-link active" href="#">Liquidaciones</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Lote/Operaciones</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contracargos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Promociones</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Reportes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Ajustes</a>
+					</li>
+					<li class="nav-item dropdown" id="hidden-link">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Liquidaciones
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="#"> Liquidaciones diarias </a>
+							<a class="dropdown-item" href="#">Liquidaciones mensuales </a>
+							<a class="dropdown-item" href="#">Subida manual</a>
+							<a class="dropdown-item nav-link active" href="#">Impuestos</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- END SUBMENU -->
+	</header>
+	<!-- END HEADER -->
+
+
+	<!-- START SIDEBAR -->
+	<div class="container-fluid content">
+		<div class="row">
+			<div class="col-md-2 sidebar d-none d-sm-none d-md-none d-lg-block">
+				<div class="sidebar-sticky">
+					<ul class="nav">
+						<li class="nav-item"><a href="" class="nav-link">Liquidaciones diarias</a></li>
+						<li class="nav-item"><a href="" class="nav-link"> Liquidaciones Mensuales</a></li>
+						<li class="nav-item"><a href="" class="nav-link"> Subida Manual</a></li>
+						<li class="nav-item"><a href="" class="nav-link active">Impuestos</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- END SIDEBAR -->
+			<main role="main" class="col-md-12 my-4 ml-sm-auto col-lg-10 px-4">
+				<!-- START SELECTORS -->
+				<div class="d-flex row selectors">
+					<div class="form-group col-12 col-md-2 ">
+						<label for="inputState">Comercios</label>
+						<select id="inputState" class="form-control dropdown-options">
+							<option selected>Todos los comercios</option>
+							<option>...</option>
+						</select>
+					</div>
+					<div class="form-group col-md-2">
+						<label for="inputState">Bancos</label>
+						<select id="inputState" class="form-control dropdown-options">
+							<option selected>Todos los bancos</option>
+							<option>...</option>
+						</select>
+					</div>
+				</div>
+				<div class="d-flex align-items-end row selectors">
+					<div class="form-group col-md-2 procesadoras-pago">
+						<label for="inputState">Procesadoras de pago</label>
+						<select id="inputState" class="form-control dropdown-options">
+							<option selected>Todas las procesadoras</option>
+							<option>...</option>
+						</select>
+					</div>
+					<div class="form-group mb-0	 col-md-2">
+						<label for="inputState">Tarjetas</label>
+						<select id="inputState" class="form-control dropdown-options">
+							<option selected>Todas las tarjetas</option>
+							<option>...</option>
+						</select>
+					</div>
+					<div class="col-md-4 date-selectors">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><img src="assets/date-picker.svg"></span>
+							</div>
+							<input type="date" aria-label="First name" data-date-format="dd/mm/yyyy" class="form-control">
+							<input type="date" aria-label="Last name" format="dd/mm/yyyy" class="form-control">
+						</div>
+					</div>
+					<div class=" ml-auto col-lg-3 col-12 col-md-3 report-button">
+						<button type="button" class="btn btn-primary btn-block d-flex align-items-center" data-toggle="button" aria-pressed="false" autocomplete="off"> <img src="assets/file.svg" class="mr-3">
+							Generar reporte
+						</button>
+					</div>
+				</div>
+				<!-- END SELECTORS -->
+				<!-- START TABLES -->
+				<div class="row mt-3">
+					<div class="col">
+						<div class="card">
+							<div class="card-body" id="card-body-wrapper">
+								<div class="row">
+									<div class="col-md-2 table-title">
+										<span>Total Retenciones</span>
+										<p>	$ 723.451,00</p>
+									</div>
+									<div class="col-md-10">
+										<div class="table-wrapper table-responsive">
+											<table  class="table table-hover tableMain" cellpadding="0" cellspacing="0">
+												<thead>
+													<tr>
+														<th class="first-col empty-col">.</th>
+														<th>Visa</th>
+														<th>Master Card</th>
+														<th>AMEX</th>
+														<th>Naranja</th>
+														<th>Cabal</th>
+														<th>Cordobesa</th>
+														<th>Credit Card</th>
+														<th>Credit Card</th>
+														<th>Credit Card</th>
+														<th>Credit Card</th>
+														<th>Credit Card</th>
+														<th>Credit Card</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="first-row">
+														<td class="first-col  green-border">IVA <span>$ 20.720,00</span></td>
+														<td>$ 10.360,00</td>
+														<td>$ 10.360,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>
+													<tr class="">
+														<td class="first-col">Ganancias <span>$ 0,00</span></td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>
+													<tr class="breakrow table-pointer">
+														<td class="first-col">Ingresos Brutos <span>$ 20.720,00</span></td>
+														<td>$ 2.450,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>
+													<tr class="datarow hidden-column">
+														<td class="first-col displayed-data">Buenos Aires <span>$ 720,00</span></td>
+														<td>$ 450,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>													
+													<tr class="datarow hidden-column">
+														<td class="first-col displayed-data">Córdoba <span>$ 720,00</span></td>
+														<td>$ 450,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>													
+													<tr class="datarow hidden-column">
+														<td class="first-col displayed-data">La Rioja<span>$ 720,00</span></td>
+														<td>$ 450,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>
+													<tr class="breakrow">
+														<td class="first-col">Otros<span>$ 720,00</span></td>
+														<td>$ 90,00 </td>
+														<td>$ 30,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>	
+													<tr class="breakrow last-row">
+														<td class="first-col">Subtotal <span> $ 20.720,00 </span></td>
+														<td>$ 90,00 </td>
+														<td>$ 30,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>    
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>											
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+									<div class="col-md-2 table-title">
+										<span>Total  Percepciones </span>
+										<p>$ 189.021,00</p>
+									</div>
+									<div class="col-md-10">
+										<div class="table-wrapper table-responsive">
+											<table  class="table  table-hover mt-2 tableMain">
+												<thead>
+												</thead>
+												<tbody>
+													<tr class="first-row">
+														<td class="first-col  green-border">IVA <span>$ 20.720,00</span></td>
+														<td>$ 10.360,00</td>
+														<td>$ 10.360,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>
+													<tr class="">
+														<td class="first-col">Ganancias <span>$ 0,00</span></td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>
+													<tr class="breakrow table-pointer">
+														<td class="first-col">Ingresos Brutos <span>$ 20.720,00</span></td>
+														<td>$ 2.450,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>
+													<tr class="datarow hidden-column">
+														<td class="first-col displayed-data">Buenos Aires <span>$ 720,00</span></td>
+														<td>$ 450,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>													
+													<tr class="datarow hidden-column">
+														<td class="first-col displayed-data">Córdoba <span>$ 720,00</span></td>
+														<td>$ 450,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>													
+													<tr class="datarow hidden-column">
+														<td class="first-col displayed-data">La Rioja<span>$ 720,00</span></td>
+														<td>$ 450,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>
+													<tr class="breakrow">
+														<td class="first-col">Otros<span>$ 720,00</span></td>
+														<td>$ 90,00 </td>
+														<td>$ 30,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>	
+													<tr class="breakrow last-row">
+														<td class="first-col">Subtotal <span> $ 20.720,00 </span></td>
+														<td>$ 90,00 </td>
+														<td>$ 30,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>    
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+														<td>$ 0,00</td>
+													</tr>											
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+									<div class="col-md-2 table-title">
+										<span>Total Retenciones</span>
+										<p>	$ 723.451,00</p>
+									</div>
+									<div class="col-md-10">
+										<div class="table-wrapper table-responsive">
+											<table  class="table  table-hover mt-2 tableMain">
+												<thead>
+												</thead>
+												<tbody>
+													<tr class="first-row">
+														<td class="first-col green-border"> IVA %21 <span>$ 0,00 </span> </td>
+														<td>$ 10.360,00 </td>
+														<td>$ 10.360,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+													</tr>
+													<tr class="">
+														<td class="first-col"> IVA %10.5 <span>$ 0,00</span></td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+													</tr>
+													<tr class="breakrow">
+														<td class="first-col">Debito/Credito <span>$ 0,00</span></td>
+														<td>$ 2.450,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+													</tr>
+													<tr class="datarow">
+														<td class="first-col">Otros <span>$ 0,00</span></td>
+														<td>$ 90,00</td>
+														<td>$ 30,00</td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+													</tr>
+													<tr class="">
+														<td class="first-col">Sellados <span> $ 0,00 </span></td>
+														<td>$ 90,00</td>
+														<td>$ 30,00</td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+													</tr>	
+													<tr class="last-row">
+														<td class="first-col">Subtotal <span> $ 0,00 </span></td>
+														<td>$ 90,00</td>
+														<td>$ 30,00</td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+														<td> $ 0,00 </td>
+													</tr>											
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</main>
+
+		</div>
+	</div>
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+		
+		$( document ).ready(function() {
+
+        //collapse and expand sections
+
+        //$('.breakrow').click(function(){
+        	
+        	$('.tableMain').on('click', 'tr.breakrow',function(){
+        		$(this).nextUntil('tr.breakrow').slideToggle(200);
+        	//$(this).nextUntil('tr.breakrow').toggleClass('active');
+        });
+        });
+
+    </script>
+
+</body>
+</html>
