@@ -1,0 +1,72 @@
+/****************************************************************/
+/****************************************************************/
+/* Card total big */
+/****************************************************************/
+/****************************************************************/
+
+.card-big-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card-big {
+        font-family: Inter;
+        font-style: normal;
+        width: 50%;
+        border-top: 10px solid #87B5FF;
+
+        h2 {
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 150%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .big-number {
+            font-weight: bold;
+            font-size: 42px;
+            text-align: center;
+            letter-spacing: -0.04em;
+            display: flex;
+            justify-content: center;
+            margin-top: 14px;
+            margin-bottom: 25px;
+            sup {
+                    vertical-align: super;
+                    font-size: smaller;
+                }
+        }
+
+        a {
+            justify-content: center;
+            height: 40px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        a:active{
+            color: #07357F;
+        }
+        div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            bottom: 10px;
+        }
+    }
+}
+
+
+/* Responsive */
+@media only screen  and (max-width : 700px) {
+    .card-big-container{
+        .card-big{
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
