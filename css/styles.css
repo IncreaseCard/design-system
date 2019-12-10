@@ -648,8 +648,12 @@ h3 {
       .card-small-container .card-small .info-wrapper a:active {
         color: #07357F; }
       .card-small-container .card-small .info-wrapper .button-wrapper {
+<<<<<<< HEAD
         display: flex;
         align-self: center; }
+=======
+        align-self: flex-end; }
+>>>>>>> origin/develop
 
 /* Responsive */
 @media only screen and (max-width: 800px) {
@@ -657,6 +661,7 @@ h3 {
     justify-content: center;
     display: flex; }
   .card-small-container .card-small .info-wrapper {
+<<<<<<< HEAD
     display: block; }
     .card-small-container .card-small .info-wrapper .big-number-wrapper {
       display: flex;
@@ -666,6 +671,17 @@ h3 {
     .card-small-container .card-small .info-wrapper .button-wrapper {
       display: flex;
       justify-content: center; } }
+=======
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    .card-small-container .card-small .info-wrapper .number-wrapper {
+      align-self: center; }
+      .card-small-container .card-small .info-wrapper .number-wrapper .big-number {
+        font-size: 20px; }
+    .card-small-container .card-small .info-wrapper .button-wrapper {
+      align-self: center; } }
+>>>>>>> origin/develop
 
 /****************************************************************/
 /****************************************************************/
