@@ -1,0 +1,89 @@
+/****************************************************************/
+/****************************************************************/
+/* Card total small */
+/****************************************************************/
+/****************************************************************/
+
+.card-small-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card-small-green {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        width: 50%;
+        border-top: 10px solid #27BA58;
+
+        h3 {
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: -0.011em;
+            margin: 0;
+            font-weight: normal;
+        }
+
+
+        .info-wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            .big-number {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 124%;
+                letter-spacing: -0.04em;
+
+                sup {
+                    vertical-align: super;
+                    font-size: smaller;
+                }
+            }
+
+            a {
+                justify-content: center;
+                height: 40px;
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+
+            a:active {
+                color: #07357F;
+            }
+
+            .button-wrapper {
+                align-self: flex-end;
+            }
+        }
+    }
+}
+
+
+/* Responsive */
+@media only screen and (max-width : 800px) {
+    .card-small-container {
+        .card-small-green {
+            h3 {
+                justify-content: center;
+                display: flex;
+            }
+
+            .info-wrapper {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                .number-wrapper{
+                        align-self: center;
+                .big-number {
+                    font-size: 16px;
+                }
+                    }
+                .button-wrapper{
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
