@@ -9,5 +9,5 @@ To run storybook, go to **libreria** folder and run the following commands:
 
 To run **Storybook** and preview components:
 
- `npm run storybook`
+ `npm start`
 
