@@ -30,6 +30,7 @@
                 <li><a href="/index.html" class="active">Librería</a></li>
                 <li><a href="/pay.html">Pay</a></li>
                 <li><a href="/card.html">Card</a></li>
+                <li><a href="/colors.html">Colores</a></li>
             </ul>
         </nav>
     </header>
@@ -40,7 +41,9 @@
             <div class="col-3">
                 <div class="list-group" id="list-tab" role="tablist">
 
-                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#buttons" role="tab">Botones</a>
+                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#colors" role="tab">Colores</a>
+                    
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#buttons" role="tab">Botones</a>
 
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#moreAction" role="tab">Botón MoreAction</a>
 
@@ -62,7 +65,11 @@
             </div>
             <div class="col-9">
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="buttons" role="tabpanel">
+                    <div class="tab-pane fade show active" id="colors" role="tabpanel">
+                        <iframe class="component_container" src="components/colors.html"></iframe>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="buttons" role="tabpanel">
                         <iframe class="component_container" src="components/buttons.html"></iframe>
                     </div>
 

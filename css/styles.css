@@ -148,6 +148,50 @@ html {
 .icon.check:before {
   content: "check_circle"; }
 
+.swatch {
+  width: 130px;
+  height: 130px;
+  float: left;
+  margin-right: 2px;
+  margin-bottom: 27px;
+  box-shadow: 0px 0px 5px rgba(24, 32, 38, 0.15);
+  border-radius: 9px; }
+
+.swatch.base {
+  box-shadow: 0px 8px 10px rgba(24, 32, 38, 0.09), 0px 6px 30px rgba(24, 32, 38, 0.11), 0px 16px 24px rgba(24, 32, 38, 0.13); }
+
+.color-code {
+  color: #182026;
+  padding: 8px;
+  width: 100%;
+  text-align: center; }
+
+.color {
+  width: 100%;
+  height: 100px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  float: left;
+  background-color: #00B5B3; }
+
+.color-shade-1 {
+  background-color: #03fffc; }
+
+.color-shade-2 {
+  background-color: #00e8e5; }
+
+.color-shade-3 {
+  background-color: #00cfcc; }
+
+.color-shade-4 {
+  background-color: #009c9a; }
+
+.color-shade-5 {
+  background-color: #008281; }
+
+.color-shade-6 {
+  background-color: #006967; }
+
 /****************************************************************/
 /****************************************************************/
 /* STORYBOOK */

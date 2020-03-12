@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />    
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+	<title>Pay | Increase Design System</title>
+</head>
+
+<body>
+
+	<header>
+        <div class="row heading">
+            <img src="images/logos/Main%20Icon%20Color.svg"/>
+            <div class="title">
+                <h2>Increase Design System</h2>
+                <h3>Maquetado</h3>
+            </div>            
+        </div>
+        <nav class="row">
+            <ul>
+                <li><a href="/index.html">Librería</a></li>
+                <li><a href="/pay.html">Pay</a></li>
+                <li><a href="/card.html">Card</a></li>
+                <li><a href="/colors.html" class="active">Colors</a></li>
+            </ul>
+        </nav>
+	</header>
+    
+    <div class="container">
+        
+                    
+        <!--<label>Lights</label>-->
+        <div class="row">
+            <div class="col">            
+                <div class="swatch" data-rel="1">
+                    <div class="color color-shade-1"></div>
+                    <span class="color-code"></span>
+                </div>
+                <div class="swatch" data-rel="2">
+                    <div class="color color-shade-2"></div>
+                    <span class="color-code"></span>
+                </div>
+                <div class="swatch" data-rel="3">
+                    <div class="color color-shade-3"></div>
+                    <span class="color-code"></span>
+                </div>                
+                
+                <div class="swatch base" data-rel="0">
+                    <div class="color color-shade-0"></div>
+                    <span class="color-code"></span>
+                </div>
+                
+                <div class="swatch" data-rel="4">
+                    <div class="color color-shade-4"></div>
+                    <span class="color-code"></span>
+                </div>
+                <div class="swatch" data-rel="5">
+                    <div class="color color-shade-5"></div>
+                    <span class="color-code"></span>
+                </div>
+                <div class="swatch" data-rel="6">
+                    <div class="color color-shade-6"></div>
+                    <span class="color-code"></span>
+                </div>
+            </div>
+        </div>
+        <!--<label>Primario</label>
+        <div class="row">
+            <div class="col">
+                
+            </div>
+        </div>
+        <label>Darks</label>
+        <div class="row">
+            <div class="col">
+                
+            </div>
+        </div>-->
+        
+    </div>
+
+	<footer>
+<!--		<p>Copyright 2009 Juan</p>-->
+	</footer>
+
+</body>
+    
+<script>
+$(document).ready(function() {
+    
+    $('.swatch').each(function(index){
+        var colorCode = "" + rgb2hex($('.swatch[data-rel="'+index+'"] .color').css('background-color')).toUpperCase();
+
+//        console.log(colorCode);
+        
+        $('.swatch[data-rel="'+index+'"] .color-code').html(colorCode);
+    });
+    
+    
+//    var baseColor = rgb2hex($('.swatch .color-shade-0').css('background-color'));    
+//    
+//    var shadeColor = lighten(baseColor, 16);
+//    console.log(shadeColor);
+//    
+//    $('.swatch .color-shade-2').css('background-color',shadeColor);
+});
+
+    
+///////////////////////
+///////////////////////
+
+function rgb2hex(rgb) {
+    rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    function hex(x) {
+        return ("0" + parseInt(x).toString(16)).slice(-2);
+    }
+    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+}
+    
+    
+/* Suma el porcentaje indicado a un color (RR, GG o BB) hexadecimal para aclararlo */
+const addLight = function(color, amount){
+  let cc = parseInt(color,16) + amount;
+  let c = (cc > 255) ? 255 : (cc);
+  c = (c.toString(16).length > 1 ) ? c.toString(16) : `0${c.toString(16)}`;
+  return c;
+}
+
+/* Aclara un color hexadecimal de 6 caracteres #RRGGBB segun el porcentaje indicado */
+const lighten = (color, amount)=> {
+  color = (color.indexOf("#")>=0) ? color.substring(1,color.length) : color;
+  amount = parseInt((255*amount)/100);
+  return color = `#${addLight(color.substring(0,2), amount)}${addLight(color.substring(2,4), amount)}${addLight(color.substring(4,6), amount)}`;
+}
+
+/* Resta el porcentaje indicado a un color (RR, GG o BB) hexadecimal para oscurecerlo */
+const subtractLight = function(color, amount){
+  let cc = parseInt(color,16) - amount;
+  let c = (cc < 0) ? 0 : (cc);
+  c = (c.toString(16).length > 1 ) ? c.toString(16) : `0${c.toString(16)}`;
+  return c;
+}
+
+/* Oscurece un color hexadecimal de 6 caracteres #RRGGBB segun el porcentaje indicado */
+const darken = (color, amount) =>{
+  color = (color.indexOf("#")>=0) ? color.substring(1,color.length) : color;
+  amount = parseInt((255*amount)/100);
+  return color = `#${subtractLight(color.substring(0,2), amount)}${subtractLight(color.substring(2,4), amount)}${subtractLight(color.substring(4,6), amount)}`;
+}
+</script>
+
+</html>

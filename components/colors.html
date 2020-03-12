@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+    
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+</head>
+<body class="component"> 
+  
+    <h1>Colores</h1>
+    
+    <div class="">
+    <label>Primario</label>
+    <div class="row">
+        <div class="col">
+            <div class="swatch">
+                <div class="color"></div>
+                <span class="color-code"></span>
+            </div>
+        </div>
+    </div>
+    <label>Shades</label>
+    <div class="row">
+        <div class="col">            
+                <div class="swatch">
+                    <div class="color color-shade-1"></div>
+                    <span class="color-code"></span>
+                </div>
+                <div class="swatch">
+                    <div class="color color-shade-2"></div>
+                    <span class="color-code"></span>
+                </div>
+                <div class="swatch">
+                    <div class="color color-shade-3"></div>
+                    <span class="color-code"></span>
+                </div>
+                <div class="swatch">
+                    <div class="color color-shade-4"></div>
+                    <span class="color-code"></span>
+                </div>
+                <div class="swatch">
+                    <div class="color color-shade-5"></div>
+                    <span class="color-code"></span>
+                </div>
+                
+        </div>
+    </div>
+    </div>
+  
+</body> 
+    
+<script>
+$(document).ready(function() {
+    $('.swatch .color-code').html(function(){
+        var colorCode = "" + rgb2hex($('.swatch .color').css('background-color')).toUpperCase();
+
+        
+        return colorCode;
+    });
+//    console.log();
+});
+    
+function rgb2hex(rgb) {
+    rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    function hex(x) {
+        return ("0" + parseInt(x).toString(16)).slice(-2);
+    }
+    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+}    
+</script>
+  
+</html> 
